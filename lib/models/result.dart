@@ -5,12 +5,14 @@ class Result<T> {
 
   final bool isSuccessful;
   final T? obj;
+  final dynamic alt;
   final Log? log;
 
   Result({
     this.isSuccessful = false,
     Log? log,
     this.obj,
+    this.alt,
   }) : log = log ?? Log();
 
   bool get hasFailed => !isSuccessful;
