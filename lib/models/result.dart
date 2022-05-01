@@ -32,6 +32,7 @@ class Result<T> {
     final T? obj,
     final Log? log,
     final dynamic alt,
+    final String? translationKey,
     final bool bypassRepoInsertion = false,
   }) =>
       Result(
@@ -42,6 +43,7 @@ class Result<T> {
             Log(
               logLevel: LogLevel.ERROR,
               msg: msg,
+              translationKey: translationKey,
               bypassRepoInsertion: bypassRepoInsertion,
               stacktrace: stacktrace,
             ),
