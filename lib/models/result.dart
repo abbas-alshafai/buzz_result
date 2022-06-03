@@ -1,5 +1,4 @@
 import 'package:buzz_logger/models/log.dart';
-import 'package:buzz_utils/buzz_utils.dart';
 
 class Result<T> {
   final bool isSuccessful;
@@ -33,7 +32,6 @@ class Result<T> {
     final Log? log,
     final dynamic alt,
     final String? translationKey,
-    final bool bypassRepoInsertion = false,
   }) =>
       Result(
         obj: obj,
@@ -41,10 +39,9 @@ class Result<T> {
         isSuccessful: false,
         log: log ??
             Log(
-              logLevel: LogLevel.ERROR,
+              logLevel: LogLevel.error,
               msg: msg,
               translationKey: translationKey,
-              bypassRepoInsertion: bypassRepoInsertion,
               stacktrace: stacktrace,
             ),
       );
