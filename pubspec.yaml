@@ -18,15 +18,12 @@ dependencies:
       url: https://github.com/abbas-alshafai/buzz_logger
 
 
-  buzz_utils:
-    git:
-      ref: master
-      url: https://github.com/abbas-alshafai/buzz_utils
+  buzz_utils: ^0.0.2
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.0
+  flutter_lints: ^2.0.0
 
 flutter:
